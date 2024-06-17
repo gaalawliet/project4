@@ -1,0 +1,113 @@
+<mvc:View xmlns:table="sap.ui.table"
+    controllerName="project4.controller.View1"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <VBox
+        id="_IDGenVBox1"
+        fitContainer="true"
+    >
+        <smartFilterBar:SmartFilterBar
+            id="smartFilterBar"
+            entitySet="ZRDWGP_TRANS_REQUEST_HEADER"
+            persistencyKey="SmartFilter_Explored"
+
+        >
+            <smartFilterBar:controlConfiguration>
+                <smartFilterBar:ControlConfiguration
+                    id="IdTransportRequest"
+                    key="TransportRequest"
+                    visibleInAdvancedArea="true"
+
+                >
+                    <smartFilterBar:defaultFilterValues>
+                        <smartFilterBar:SelectOption
+                            id="IDGenSelectOption1"
+                            operator="Contains"
+                            
+                        />
+                    </smartFilterBar:defaultFilterValues>
+                </smartFilterBar:ControlConfiguration>
+                <smartFilterBar:ControlConfiguration
+                    id="IdCustomer"
+                    key="Customer"
+                    visibleInAdvancedArea="true"
+                >
+                    <smartFilterBar:defaultFilterValues>
+                        <smartFilterBar:SelectOption
+                            id="_IDGenSelectOption2"
+                            operator="Any"
+                        />
+                    </smartFilterBar:defaultFilterValues>
+                </smartFilterBar:ControlConfiguration>
+            </smartFilterBar:controlConfiguration>
+
+            <smartFilterBar:layoutData>
+                <FlexItemData
+                    id="_IDGenFlexItemData1"
+                    shrinkFactor="0"
+                />
+            </smartFilterBar:layoutData>
+        </smartFilterBar:SmartFilterBar>
+        <smartTable:SmartTable
+            id="LineItemsSmartTable"
+            entitySet="ZRDWGP_TRANS_REQUEST_HEADER"
+            initiallyVisibleFields="TransportRequest,Customer,CustomerDescription,CustomerAddress,
+            Country,City,District,Street,Plant,Plate,PlannedDepartureDate,PlannedDepartureTime,
+            ExitDateMade,ShippingCompany,ShippingCompanyName,DriverName,VehicleType,Status,
+            TollValue,CreatedAtDate,CreatedAtHour,Username"
+            smartFilterId="smartFilterBar"
+            tableType="Table"
+            header="Solicitações de Transporte"
+            persistencyKey="SmartTableAnalytical_Explored"
+            enableAutoBinding="true"
+            class="sapUiResponsiveContentPadding"
+            enableAutoColumnWidth="true"  
+            
+        >
+
+        <smartTable:customToolbar>
+        <OverflowToolbar id="_IDGenOverflowToolbar1" design="Transparent" >
+
+            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+					<OverflowToolbarButton id="_IDGenOverflowToolbarButton1"
+						icon="sap-icon://create-form"
+                    
+						text="{i18n>register}"
+						tooltip="{i18n>register}"
+						press="onCreateCustomer"
+					/>
+					<OverflowToolbarButton id="_IDGenOverflowToolbarButton2"
+						icon="sap-icon://request"
+						text="{i18n>update}"
+						tooltip="{i18n>update}"
+						press="onUpdateCustomer"
+					/>
+					<OverflowToolbarButton id="_IDGenOverflowToolbarButton3"
+						icon="sap-icon://delete"
+						text="{i18n>delete}"
+						tooltip="{i18n>delete}"
+						press="onDeleteCustomer"
+					/>
+
+        </OverflowToolbar>
+
+
+        </smartTable:customToolbar>
+
+            <smartTable:layoutData>
+                <FlexItemData
+                    id="_IDGenFlexItemData2"
+                    growFactor="1"
+                    baseSize="0%"
+                />
+            </smartTable:layoutData>
+        </smartTable:SmartTable>
+
+ 
+
+    </VBox>
+</mvc:View>
