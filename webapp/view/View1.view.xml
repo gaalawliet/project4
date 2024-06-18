@@ -65,38 +65,8 @@
             persistencyKey="SmartTableAnalytical_Explored"
             enableAutoBinding="true"
             class="sapUiResponsiveContentPadding"
-            enableAutoColumnWidth="true"  
-            
+            enableAutoColumnWidth="true"    
         >
-
-        <smartTable:customToolbar>
-        <OverflowToolbar id="_IDGenOverflowToolbar1" design="Transparent" >
-
-            <ToolbarSpacer id="_IDGenToolbarSpacer1" />
-					<OverflowToolbarButton id="_IDGenOverflowToolbarButton1"
-						icon="sap-icon://create-form"
-                    
-						text="{i18n>register}"
-						tooltip="{i18n>register}"
-						press="onCreateCustomer"
-					/>
-					<OverflowToolbarButton id="_IDGenOverflowToolbarButton2"
-						icon="sap-icon://request"
-						text="{i18n>update}"
-						tooltip="{i18n>update}"
-						press="onUpdateCustomer"
-					/>
-					<OverflowToolbarButton id="_IDGenOverflowToolbarButton3"
-						icon="sap-icon://delete"
-						text="{i18n>delete}"
-						tooltip="{i18n>delete}"
-						press="onDeleteCustomer"
-					/>
-
-        </OverflowToolbar>
-
-
-        </smartTable:customToolbar>
 
             <smartTable:layoutData>
                 <FlexItemData
@@ -106,8 +76,5 @@
                 />
             </smartTable:layoutData>
         </smartTable:SmartTable>
-
- 
-
     </VBox>
 </mvc:View>
